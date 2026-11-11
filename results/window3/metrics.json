@@ -1,0 +1,15 @@
+{
+  "run": "window3",
+  "m": 3,
+  "threshold": 0.6,
+  "step": 0.005,
+  "seconds": 6.488289800000075,
+  "views": 12,
+  "valid_fraction": 0.35300925925925924,
+  "vertices": 35420,
+  "faces": 33490,
+  "mae_mm": 4.847493003913438,
+  "p90_mm": 9.787550490153617,
+  "foreground_coverage": 0.8914194915254238,
+  "background_predictions": 1345
+}

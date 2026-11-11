@@ -1,0 +1,13 @@
+[
+  {
+    "run": "real",
+    "m": 5,
+    "threshold": 0.6,
+    "step": 0.0025,
+    "seconds": 113.58853569999997,
+    "views": 16,
+    "valid_fraction": 0.26388671875,
+    "vertices": 14680,
+    "faces": 17848
+  }
+]

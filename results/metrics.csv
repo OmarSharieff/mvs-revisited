@@ -1,0 +1,2 @@
+run,m,threshold,step,seconds,views,valid_fraction,vertices,faces
+real,5,0.6,0.0025,113.58853569999997,16,0.26388671875,14680,17848

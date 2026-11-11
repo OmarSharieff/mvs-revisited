@@ -1,0 +1,15 @@
+{
+  "run": "threshold04",
+  "m": 5,
+  "threshold": 0.4,
+  "step": 0.005,
+  "seconds": 14.30022579999968,
+  "views": 12,
+  "valid_fraction": 0.42140480324074076,
+  "vertices": 39458,
+  "faces": 47333,
+  "mae_mm": 8.091758916529601,
+  "p90_mm": 20.28759811750358,
+  "foreground_coverage": 0.9103813559322034,
+  "background_predictions": 3057
+}

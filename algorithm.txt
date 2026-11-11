@@ -1,0 +1,21 @@
+For each reference image:
+  Select up to four neighbors by optical-axis angle, separated by >=4 degrees.
+  For each pixel with a valid reference patch and ray-box intersection:
+    Search positive camera-z samples within the bounding box.
+    Backproject candidate, then project into every selected neighbor.
+    Sample RGB patches bilinearly; reject borders and zero-energy patches.
+    Subtract per-channel means; compute joint RGB normalized correlation.
+    Accept candidate only with at least two scores strictly above threshold.
+    Correlation = mean of accepted scores.
+    Confidence = sum(accepted score - threshold)/(neighbor count*(1-threshold)).
+    Select highest correlation, keeping the first candidate on exact ties.
+    Refine within +/- one coarse step at one-tenth spacing; retain the coarse
+    winner unless a refined candidate has strictly higher correlation.
+    Store camera-z depth, confidence and correlation; otherwise remain invalid.
+Fuse maps using the DECLARED projective approximation:
+  Project grid voxels into each map, sample depth and confidence at nearest pixel.
+  In the +/- four-voxel surface band, accumulate confidence-weighted signed
+  depth residuals and weights. Unknown voxels do not become valid zero values.
+  Extract zero isosurface and remove faces outside fully observed grid cells.
+Evaluate synthetic depth error and coverage; real ground-truth metrics are N/A.
+This fusion is not identical to the original VripPack range-mesh algorithm.
